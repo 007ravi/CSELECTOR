@@ -35,6 +35,8 @@ public class signuppage extends AppCompatActivity {
     Button mbtnReg;
     @BindView(R.id.btnbacklogin)
     TextView mbtnbacklogin;
+    @BindView(R.id.msgBox)
+    TextView mMsgBox;
 
     private User mUser;
     private Network mNetwork;
@@ -69,7 +71,7 @@ public class signuppage extends AppCompatActivity {
     }
 
     private void createUser(String sPass) {
-        String loginUrl = "http://192.168.43.194:3000/api/signup";
+        String loginUrl = "http://192.168.1.3:3000/api/signup";
         JSONObject json = new JSONObject();
 
         try {
@@ -96,7 +98,13 @@ public class signuppage extends AppCompatActivity {
                             String token = response.body().string();
                             if (token.length() > 0) {
                                 mNetwork.setApiToken(token);
-                                runOnUiThread(() -> startActivity(new Intent(signuppage.this, loginpage.class)));
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mMsgBox.setText(token);
+                                        startActivity(new Intent(signuppage.this, loginpage.class));
+                                    }
+                                });
                             }
                         }
                     }
