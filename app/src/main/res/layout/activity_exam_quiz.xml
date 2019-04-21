@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +9,26 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/collegeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="425dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,18 +49,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="70dp"
-        android:text="Maximum Marks:20"
-        android:textColor="@android:color/background_dark"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
         android:layout_marginTop="160dp"
-        android:text="1.There are 5 Questions."
+        android:text="1.There are 50 Questions."
         android:textSize="15sp" />
 
     <TextView
@@ -56,6 +70,8 @@
         android:text="3.Choose the most appropriate answer."
         android:textSize="15sp" />
 
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,6 +79,8 @@
         android:layout_marginTop="220dp"
         android:text="4.Marking Scheme: \n        i)+4 for correct answer \n        ii)-1 for wrong answer"
         android:textSize="15sp" />
+
+
 
     <Button
         android:id="@+id/button_start_quiz"
@@ -73,9 +91,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="130dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="317dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="350dp"
         android:text="start" />
+
 
 </RelativeLayout>
 

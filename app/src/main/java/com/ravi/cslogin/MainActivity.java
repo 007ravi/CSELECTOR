@@ -1,5 +1,6 @@
 package com.ravi.cslogin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton oD;
     @BindView(R.id.score)
     TextView mScore;
+    @BindView(R.id.btnend)
+    Button end;
 
     Network mNetwork;
 
@@ -64,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
          getMcq();
 
+         end.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+              startActivity(new Intent(MainActivity.this,feedBack.class));
+             }
+         });
+
          choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
              @Override
              public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -83,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getMcq() {
-        String url = "https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple";
+        String url = "https://opentdb.com/api.php?amount=100&type=multiple";
         mNetwork.makeApiGetRequest(url, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

@@ -72,7 +72,7 @@ public class loginpage extends AppCompatActivity {
 
     private void login(String email, String password) {
 
-        String loginUrl = "http://192.168.1.3:3000/api/login";
+        String loginUrl = "http://192.168.1.5:3000/api/login";
         JSONObject json = new JSONObject();
 
         try {
@@ -98,7 +98,7 @@ public class loginpage extends AppCompatActivity {
                             String token = response.body().string();
                             if(token.length() > 0) {
                                 mNetwork.setApiToken(token);
-                                runOnUiThread(() -> startActivity(new Intent(loginpage.this, MainActivity.class)));
+                                runOnUiThread(() -> startActivity(new Intent(loginpage.this, StartActivity.class)));
                             }
                         }
                     }
