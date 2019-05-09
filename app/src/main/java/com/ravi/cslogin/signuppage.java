@@ -71,7 +71,7 @@ public class signuppage extends AppCompatActivity {
     }
 
     private void createUser(String sPass) {
-        String loginUrl = "http://192.168.1.5:3000/api/signup";
+        String loginUrl = "http://192.168.43.194:3000/api/signup";
         JSONObject json = new JSONObject();
 
         try {

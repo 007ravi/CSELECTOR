@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgw"
+    android:background="@drawable/bgw1"
     tools:context="MainActivity">
 
     <EditText
@@ -88,6 +88,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="48dp"
         android:text="               Already a user! Login"
+        android:textColor="#99ffcc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

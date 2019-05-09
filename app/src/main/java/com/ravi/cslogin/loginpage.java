@@ -72,7 +72,7 @@ public class loginpage extends AppCompatActivity {
 
     private void login(String email, String password) {
 
-        String loginUrl = "http://192.168.1.5:3000/api/login";
+        String loginUrl = "http://192.168.43.194:3000/api/login";
         JSONObject json = new JSONObject();
 
         try {
